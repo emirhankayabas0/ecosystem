@@ -1,0 +1,22 @@
+{
+  "logo": "Haberler",
+  "account": "Hesap",
+  "weather": "Hava Durumu",
+  "picture": "Resim Yükle",
+  "finance": "Finans",
+  "translation": "Çeviri",
+  "covid": "Koronavirüs",
+  "news": "Haberler",
+  "ip": "IP Adresim",
+  "sign-in": "Oturum aç",
+
+  "general": "En çok okunan haberler",
+  "business": "İş",
+  "science": "Bilim ve Teknoloji",
+  "health": "Sağlık",
+  "sports": "Spor",
+  "entertainment": "Eğlence",
+  "region": "Dil ve bölge",
+  "language": "Türkçe (Türkiye)",
+  "modal-title": "İlgilenilen dil ve bölge <br> <span>Seçilen dil ve bölge çiftiyle ilgili haberleri görün</span>"
+}

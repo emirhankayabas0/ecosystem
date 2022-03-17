@@ -1,0 +1,28 @@
+{
+  "logo": "News",
+  "account": "Account",
+  "weather": "Weather",
+  "picture": "Picture",
+  "finance": "Finance",
+  "translation": "Translation",
+  "covid": "Coronavirus",
+  "news": "News",
+  "ip": "IP Address",
+  "sign-in": "Sign in",
+
+  "general": "Top stories",
+  "business": "Business",
+  "science": "Science",
+  "health": "Health",
+  "sports": "Sports",
+  "entertainment": "Entertainment",
+  "region": "Language & region",
+  "language": "English (United States)",
+  "modal-title": "Language & region of interest <br> <span>See news from the selected language and region pair</span>",
+  "select-tr": "Turkey",
+  "select-us": "English",
+  "cancel-text": "Cancel",
+  "update-text": "Update",
+
+  "index-title": "Headlines"
+}

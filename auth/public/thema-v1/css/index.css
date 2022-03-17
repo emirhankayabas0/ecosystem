@@ -1,0 +1,866 @@
+html,
+body {
+  height: 100%;
+}
+
+span.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+  cursor: pointer;
+}
+
+span.icon svg {
+  min-height: 24px;
+  fill: #5f6368;
+}
+
+span.icon:hover {
+  background-color: #eee;
+}
+
+button.disabled {
+  pointer-events: all !important;
+  cursor: not-allowed !important;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  max-height: 64px;
+}
+
+header.header {
+  border-bottom: 1px solid #eceff1;
+}
+
+header.header nav {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.header nav.nav .start {
+  margin-right: 100px;
+}
+
+header.header nav.nav .start a.brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header.header nav.nav .start a.brand img {
+  width: 32.5px;
+  height: 32.5px;
+}
+
+header.header nav.nav .start a.brand span {
+  padding-left: 4px;
+  color: #5f6368;
+  font-size: 22px;
+  font-family: "Product Sans", Arial, sans-serif;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+header.header nav.nav .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+header.header nav.nav .center .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 720px;
+  position: relative;
+}
+
+header.header nav.nav .center .field span.icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+header.header nav.nav .center .field span.icon.clear {
+  right: 7px;
+  display: none;
+}
+
+header.header nav.nav .center .field span.icon:hover {
+  background-color: #e3e5e6;
+}
+
+header.header nav.nav .center .field input.search {
+  background: #f1f3f4;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  max-width: 720px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 46px;
+  padding-left: 56px;
+  padding-right: 49px;
+  color: #434444;
+}
+
+header.header nav.nav .center .field input.search:focus {
+  -webkit-box-shadow: 0 1px 1px 0 rgba(65, 69, 73, 0.3), 0 1px 3px 1px rgba(65, 69, 73, 0.15) !important;
+          box-shadow: 0 1px 1px 0 rgba(65, 69, 73, 0.3), 0 1px 3px 1px rgba(65, 69, 73, 0.15) !important;
+  background-color: #fff;
+}
+
+header.header nav.nav .center .field input.search:focus + span.clear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.header nav.nav .center .field input.search::-webkit-input-placeholder {
+  color: #c6c8c9;
+}
+
+header.header nav.nav .center .field input.search:-ms-input-placeholder {
+  color: #c6c8c9;
+}
+
+header.header nav.nav .center .field input.search::-ms-input-placeholder {
+  color: #c6c8c9;
+}
+
+header.header nav.nav .center .field input.search::placeholder {
+  color: #c6c8c9;
+}
+
+header.header nav.nav .center #result {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 1px 0 rgba(65, 69, 73, 0.3), 0 1px 3px 1px rgba(65, 69, 73, 0.15) !important;
+          box-shadow: 0 1px 1px 0 rgba(65, 69, 73, 0.3), 0 1px 3px 1px rgba(65, 69, 73, 0.15) !important;
+  padding: 1px 0;
+  border: 1px solid transparent;
+  background-color: #ffffff;
+  border-radius: 0 0 2px 2px;
+  max-width: 720px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  opacity: 0;
+  max-height: 500px;
+  overflow-y: auto;
+  visibility: hidden;
+}
+
+header.header nav.nav .center #result ul.list {
+  margin: 0;
+  padding: 0;
+}
+
+header.header nav.nav .center #result ul.list li.list-item {
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.01428571em;
+  color: #202124;
+  background-color: #fff;
+}
+
+header.header nav.nav .center #result ul.list li.list-item:hover {
+  border-color: #1a73e8;
+  background-color: #f1f3f4;
+}
+
+header.header nav.nav .center #result ul.list li.list-item .image {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header.header nav.nav .end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+main.auth, main.verification {
+  min-height: 100vh;
+  height: 100%;
+}
+
+main.auth .authArea,
+main.auth .verificationArea, main.verification .authArea,
+main.verification .verificationArea {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+main.auth .authArea .authContainer,
+main.auth .authArea .verificationContainer,
+main.auth .verificationArea .authContainer,
+main.auth .verificationArea .verificationContainer, main.verification .authArea .authContainer,
+main.verification .authArea .verificationContainer,
+main.verification .verificationArea .authContainer,
+main.verification .verificationArea .verificationContainer {
+  width: 100%;
+  max-width: 825px;
+  height: auto;
+  min-height: 500px;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  padding: 3rem 2.5rem 2.25rem;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+  position: relative;
+}
+
+main.auth .authArea .authContainer.login,
+main.auth .authArea .verificationContainer.login,
+main.auth .verificationArea .authContainer.login,
+main.auth .verificationArea .verificationContainer.login, main.verification .authArea .authContainer.login,
+main.verification .authArea .verificationContainer.login,
+main.verification .verificationArea .authContainer.login,
+main.verification .verificationArea .verificationContainer.login {
+  min-height: auto;
+}
+
+main.auth .authArea .authContainer.verification .spinner-border,
+main.auth .authArea .verificationContainer.verification .spinner-border,
+main.auth .verificationArea .authContainer.verification .spinner-border,
+main.auth .verificationArea .verificationContainer.verification .spinner-border, main.verification .authArea .authContainer.verification .spinner-border,
+main.verification .authArea .verificationContainer.verification .spinner-border,
+main.verification .verificationArea .authContainer.verification .spinner-border,
+main.verification .verificationArea .verificationContainer.verification .spinner-border {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-width: 6px;
+  width: 3rem;
+  height: 3rem;
+  z-index: 2;
+  display: none;
+}
+
+main.auth .authArea .authContainer .authHeader,
+main.auth .authArea .authContainer .verificationHeader,
+main.auth .authArea .verificationContainer .authHeader,
+main.auth .authArea .verificationContainer .verificationHeader,
+main.auth .verificationArea .authContainer .authHeader,
+main.auth .verificationArea .authContainer .verificationHeader,
+main.auth .verificationArea .verificationContainer .authHeader,
+main.auth .verificationArea .verificationContainer .verificationHeader, main.verification .authArea .authContainer .authHeader,
+main.verification .authArea .authContainer .verificationHeader,
+main.verification .authArea .verificationContainer .authHeader,
+main.verification .authArea .verificationContainer .verificationHeader,
+main.verification .verificationArea .authContainer .authHeader,
+main.verification .verificationArea .authContainer .verificationHeader,
+main.verification .verificationArea .verificationContainer .authHeader,
+main.verification .verificationArea .verificationContainer .verificationHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+main.auth .authArea .authContainer .authHeader #logo .avatarAnimation,
+main.auth .authArea .authContainer .verificationHeader #logo .avatarAnimation,
+main.auth .authArea .verificationContainer .authHeader #logo .avatarAnimation,
+main.auth .authArea .verificationContainer .verificationHeader #logo .avatarAnimation,
+main.auth .verificationArea .authContainer .authHeader #logo .avatarAnimation,
+main.auth .verificationArea .authContainer .verificationHeader #logo .avatarAnimation,
+main.auth .verificationArea .verificationContainer .authHeader #logo .avatarAnimation,
+main.auth .verificationArea .verificationContainer .verificationHeader #logo .avatarAnimation, main.verification .authArea .authContainer .authHeader #logo .avatarAnimation,
+main.verification .authArea .authContainer .verificationHeader #logo .avatarAnimation,
+main.verification .authArea .verificationContainer .authHeader #logo .avatarAnimation,
+main.verification .authArea .verificationContainer .verificationHeader #logo .avatarAnimation,
+main.verification .verificationArea .authContainer .authHeader #logo .avatarAnimation,
+main.verification .verificationArea .authContainer .verificationHeader #logo .avatarAnimation,
+main.verification .verificationArea .verificationContainer .authHeader #logo .avatarAnimation,
+main.verification .verificationArea .verificationContainer .verificationHeader #logo .avatarAnimation {
+  background-color: transparent;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: inline-block;
+}
+
+main.auth .authArea .authContainer .authHeader #headingText,
+main.auth .authArea .authContainer .verificationHeader #headingText,
+main.auth .authArea .verificationContainer .authHeader #headingText,
+main.auth .authArea .verificationContainer .verificationHeader #headingText,
+main.auth .verificationArea .authContainer .authHeader #headingText,
+main.auth .verificationArea .authContainer .verificationHeader #headingText,
+main.auth .verificationArea .verificationContainer .authHeader #headingText,
+main.auth .verificationArea .verificationContainer .verificationHeader #headingText, main.verification .authArea .authContainer .authHeader #headingText,
+main.verification .authArea .authContainer .verificationHeader #headingText,
+main.verification .authArea .verificationContainer .authHeader #headingText,
+main.verification .authArea .verificationContainer .verificationHeader #headingText,
+main.verification .verificationArea .authContainer .authHeader #headingText,
+main.verification .verificationArea .authContainer .verificationHeader #headingText,
+main.verification .verificationArea .verificationContainer .authHeader #headingText,
+main.verification .verificationArea .verificationContainer .verificationHeader #headingText {
+  color: #202124;
+  padding-bottom: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3333;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+main.auth .authArea .authContainer .authHeader #headingSubtext,
+main.auth .authArea .authContainer .verificationHeader #headingSubtext,
+main.auth .authArea .verificationContainer .authHeader #headingSubtext,
+main.auth .authArea .verificationContainer .verificationHeader #headingSubtext,
+main.auth .verificationArea .authContainer .authHeader #headingSubtext,
+main.auth .verificationArea .authContainer .verificationHeader #headingSubtext,
+main.auth .verificationArea .verificationContainer .authHeader #headingSubtext,
+main.auth .verificationArea .verificationContainer .verificationHeader #headingSubtext, main.verification .authArea .authContainer .authHeader #headingSubtext,
+main.verification .authArea .authContainer .verificationHeader #headingSubtext,
+main.verification .authArea .verificationContainer .authHeader #headingSubtext,
+main.verification .authArea .verificationContainer .verificationHeader #headingSubtext,
+main.verification .verificationArea .authContainer .authHeader #headingSubtext,
+main.verification .verificationArea .authContainer .verificationHeader #headingSubtext,
+main.verification .verificationArea .verificationContainer .authHeader #headingSubtext,
+main.verification .verificationArea .verificationContainer .verificationHeader #headingSubtext {
+  color: #202124;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  padding-bottom: 0;
+}
+
+main.auth .authArea .authContainer form.authForm,
+main.auth .authArea .verificationContainer form.authForm,
+main.auth .verificationArea .authContainer form.authForm,
+main.auth .verificationArea .verificationContainer form.authForm, main.verification .authArea .authContainer form.authForm,
+main.verification .authArea .verificationContainer form.authForm,
+main.verification .verificationArea .authContainer form.authForm,
+main.verification .verificationArea .verificationContainer form.authForm {
+  margin-top: 1rem;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .form-floating,
+main.auth .authArea .verificationContainer form.authForm .authContent .form-floating,
+main.auth .verificationArea .authContainer form.authForm .authContent .form-floating,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .form-floating, main.verification .authArea .authContainer form.authForm .authContent .form-floating,
+main.verification .authArea .verificationContainer form.authForm .authContent .form-floating,
+main.verification .verificationArea .authContainer form.authForm .authContent .form-floating,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .form-floating {
+  position: relative;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword)[type="email"] + label,
+main.auth .authArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword)[type="email"] + label,
+main.auth .verificationArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword)[type="email"] + label,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword)[type="email"] + label, main.verification .authArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword)[type="email"] + label,
+main.verification .authArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword)[type="email"] + label,
+main.verification .verificationArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword)[type="email"] + label,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword)[type="email"] + label {
+  left: 3px !important;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):hover,
+main.auth .authArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):hover,
+main.auth .verificationArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):hover,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):hover, main.verification .authArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):hover,
+main.verification .authArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):hover,
+main.verification .verificationArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):hover,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):hover {
+  border-color: #bfc7cf;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus,
+main.auth .authArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus,
+main.auth .verificationArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus, main.verification .authArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus,
+main.verification .authArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus,
+main.verification .verificationArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus {
+  border-color: #1a73e8;
+  border-width: 2px;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus + label,
+main.auth .authArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus + label,
+main.auth .verificationArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus + label,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus + label, main.verification .authArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus + label,
+main.verification .authArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus + label,
+main.verification .verificationArea .authContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus + label,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .form-floating input:not(#showHidePassword):focus + label {
+  color: #1a73e8 !important;
+  opacity: 1 !important;
+  font-weight: 500;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .form-floating #domainSuffix,
+main.auth .authArea .verificationContainer form.authForm .authContent .form-floating #domainSuffix,
+main.auth .verificationArea .authContainer form.authForm .authContent .form-floating #domainSuffix,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .form-floating #domainSuffix, main.verification .authArea .authContainer form.authForm .authContent .form-floating #domainSuffix,
+main.verification .authArea .verificationContainer form.authForm .authContent .form-floating #domainSuffix,
+main.verification .verificationArea .authContainer form.authForm .authContent .form-floating #domainSuffix,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .form-floating #domainSuffix {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-90%);
+          transform: translateY(-90%);
+  right: 1rem;
+  display: none;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent #proposal,
+main.auth .authArea .verificationContainer form.authForm .authContent #proposal,
+main.auth .verificationArea .authContainer form.authForm .authContent #proposal,
+main.auth .verificationArea .verificationContainer form.authForm .authContent #proposal, main.verification .authArea .authContainer form.authForm .authContent #proposal,
+main.verification .authArea .verificationContainer form.authForm .authContent #proposal,
+main.verification .verificationArea .authContainer form.authForm .authContent #proposal,
+main.verification .verificationArea .verificationContainer form.authForm .authContent #proposal {
+  margin-top: 0.5rem;
+  margin-left: 0.15rem;
+  display: block;
+  font-size: 12px;
+  color: #5f6368;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .proposalUsurname,
+main.auth .authArea .verificationContainer form.authForm .authContent .proposalUsurname,
+main.auth .verificationArea .authContainer form.authForm .authContent .proposalUsurname,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .proposalUsurname, main.verification .authArea .authContainer form.authForm .authContent .proposalUsurname,
+main.verification .authArea .verificationContainer form.authForm .authContent .proposalUsurname,
+main.verification .verificationArea .authContainer form.authForm .authContent .proposalUsurname,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .proposalUsurname {
+  border-radius: 4px;
+  color: #1a73e8;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .proposalUsurname #proposalUsurname,
+main.auth .authArea .verificationContainer form.authForm .authContent .proposalUsurname #proposalUsurname,
+main.auth .verificationArea .authContainer form.authForm .authContent .proposalUsurname #proposalUsurname,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .proposalUsurname #proposalUsurname, main.verification .authArea .authContainer form.authForm .authContent .proposalUsurname #proposalUsurname,
+main.verification .authArea .verificationContainer form.authForm .authContent .proposalUsurname #proposalUsurname,
+main.verification .verificationArea .authContainer form.authForm .authContent .proposalUsurname #proposalUsurname,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .proposalUsurname #proposalUsurname {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+main.auth .authArea .authContainer form.authForm .authContent .proposalUsurname #proposalUsurname:hover,
+main.auth .authArea .verificationContainer form.authForm .authContent .proposalUsurname #proposalUsurname:hover,
+main.auth .verificationArea .authContainer form.authForm .authContent .proposalUsurname #proposalUsurname:hover,
+main.auth .verificationArea .verificationContainer form.authForm .authContent .proposalUsurname #proposalUsurname:hover, main.verification .authArea .authContainer form.authForm .authContent .proposalUsurname #proposalUsurname:hover,
+main.verification .authArea .verificationContainer form.authForm .authContent .proposalUsurname #proposalUsurname:hover,
+main.verification .verificationArea .authContainer form.authForm .authContent .proposalUsurname #proposalUsurname:hover,
+main.verification .verificationArea .verificationContainer form.authForm .authContent .proposalUsurname #proposalUsurname:hover {
+  background-color: #e8f1fa;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter,
+main.auth .authArea .verificationContainer form.authForm .authFooter,
+main.auth .verificationArea .authContainer form.authForm .authFooter,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter, main.verification .authArea .authContainer form.authForm .authFooter,
+main.verification .authArea .verificationContainer form.authForm .authFooter,
+main.verification .verificationArea .authContainer form.authForm .authFooter,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter {
+  margin: 1rem 0;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .form-check,
+main.auth .authArea .verificationContainer form.authForm .authFooter .form-check,
+main.auth .verificationArea .authContainer form.authForm .authFooter .form-check,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .form-check, main.verification .authArea .authContainer form.authForm .authFooter .form-check,
+main.verification .authArea .verificationContainer form.authForm .authFooter .form-check,
+main.verification .verificationArea .authContainer form.authForm .authFooter .form-check,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .form-check {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .form-check span,
+main.auth .authArea .verificationContainer form.authForm .authFooter .form-check span,
+main.auth .verificationArea .authContainer form.authForm .authFooter .form-check span,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .form-check span, main.verification .authArea .authContainer form.authForm .authFooter .form-check span,
+main.verification .authArea .verificationContainer form.authForm .authFooter .form-check span,
+main.verification .verificationArea .authContainer form.authForm .authFooter .form-check span,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .form-check span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer !important;
+  margin-left: -7.5px;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .form-check span:hover,
+main.auth .authArea .verificationContainer form.authForm .authFooter .form-check span:hover,
+main.auth .verificationArea .authContainer form.authForm .authFooter .form-check span:hover,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .form-check span:hover, main.verification .authArea .authContainer form.authForm .authFooter .form-check span:hover,
+main.verification .authArea .verificationContainer form.authForm .authFooter .form-check span:hover,
+main.verification .verificationArea .authContainer form.authForm .authFooter .form-check span:hover,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .form-check span:hover {
+  background-color: #e8f1fa;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .form-check span input#showHidePassword,
+main.auth .authArea .verificationContainer form.authForm .authFooter .form-check span input#showHidePassword,
+main.auth .verificationArea .authContainer form.authForm .authFooter .form-check span input#showHidePassword,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .form-check span input#showHidePassword, main.verification .authArea .authContainer form.authForm .authFooter .form-check span input#showHidePassword,
+main.verification .authArea .verificationContainer form.authForm .authFooter .form-check span input#showHidePassword,
+main.verification .verificationArea .authContainer form.authForm .authFooter .form-check span input#showHidePassword,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .form-check span input#showHidePassword {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #5f6368;
+  border-radius: 2px;
+  cursor: pointer !important;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .form-check span input#showHidePassword:checked,
+main.auth .authArea .verificationContainer form.authForm .authFooter .form-check span input#showHidePassword:checked,
+main.auth .verificationArea .authContainer form.authForm .authFooter .form-check span input#showHidePassword:checked,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .form-check span input#showHidePassword:checked, main.verification .authArea .authContainer form.authForm .authFooter .form-check span input#showHidePassword:checked,
+main.verification .authArea .verificationContainer form.authForm .authFooter .form-check span input#showHidePassword:checked,
+main.verification .verificationArea .authContainer form.authForm .authFooter .form-check span input#showHidePassword:checked,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .form-check span input#showHidePassword:checked {
+  background-color: #1a73e8;
+  border-color: #1a73e8;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .form-check .form-check-label,
+main.auth .authArea .verificationContainer form.authForm .authFooter .form-check .form-check-label,
+main.auth .verificationArea .authContainer form.authForm .authFooter .form-check .form-check-label,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .form-check .form-check-label, main.verification .authArea .authContainer form.authForm .authFooter .form-check .form-check-label,
+main.verification .authArea .verificationContainer form.authForm .authFooter .form-check .form-check-label,
+main.verification .verificationArea .authContainer form.authForm .authFooter .form-check .form-check-label,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .form-check .form-check-label {
+  cursor: pointer;
+  margin-top: 2px;
+  margin-left: 3px;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .orLogin,
+main.auth .authArea .verificationContainer form.authForm .authFooter .orLogin,
+main.auth .verificationArea .authContainer form.authForm .authFooter .orLogin,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .orLogin, main.verification .authArea .authContainer form.authForm .authFooter .orLogin,
+main.verification .authArea .verificationContainer form.authForm .authFooter .orLogin,
+main.verification .verificationArea .authContainer form.authForm .authFooter .orLogin,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .orLogin {
+  cursor: pointer;
+  letter-spacing: 0.0107142857em;
+  font-weight: 500;
+  position: relative;
+  border-radius: 4px;
+  max-width: 200px;
+  display: inline-block;
+  margin-left: -7.5px;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .orLogin:hover,
+main.auth .authArea .verificationContainer form.authForm .authFooter .orLogin:hover,
+main.auth .verificationArea .authContainer form.authForm .authFooter .orLogin:hover,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .orLogin:hover, main.verification .authArea .authContainer form.authForm .authFooter .orLogin:hover,
+main.verification .authArea .verificationContainer form.authForm .authFooter .orLogin:hover,
+main.verification .verificationArea .authContainer form.authForm .authFooter .orLogin:hover,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .orLogin:hover {
+  background-color: #e8f1fa;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .orLogin a,
+main.auth .authArea .verificationContainer form.authForm .authFooter .orLogin a,
+main.auth .verificationArea .authContainer form.authForm .authFooter .orLogin a,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .orLogin a, main.verification .authArea .authContainer form.authForm .authFooter .orLogin a,
+main.verification .authArea .verificationContainer form.authForm .authFooter .orLogin a,
+main.verification .verificationArea .authContainer form.authForm .authFooter .orLogin a,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .orLogin a {
+  font-size: 14px;
+  display: block;
+  padding: 12px 12px 12px;
+  width: 100%;
+  color: #1a73e8;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .formSubmit button#formSubmitButton,
+main.auth .authArea .verificationContainer form.authForm .authFooter .formSubmit button#formSubmitButton,
+main.auth .verificationArea .authContainer form.authForm .authFooter .formSubmit button#formSubmitButton,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .formSubmit button#formSubmitButton, main.verification .authArea .authContainer form.authForm .authFooter .formSubmit button#formSubmitButton,
+main.verification .authArea .verificationContainer form.authForm .authFooter .formSubmit button#formSubmitButton,
+main.verification .verificationArea .authContainer form.authForm .authFooter .formSubmit button#formSubmitButton,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .formSubmit button#formSubmitButton {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #1a73e8;
+  border: 1px solid transparent;
+  height: 45px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 12px 24px 11px;
+  -webkit-transition: background-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+}
+
+main.auth .authArea .authContainer form.authForm .authFooter .formSubmit button#formSubmitButton:hover,
+main.auth .authArea .verificationContainer form.authForm .authFooter .formSubmit button#formSubmitButton:hover,
+main.auth .verificationArea .authContainer form.authForm .authFooter .formSubmit button#formSubmitButton:hover,
+main.auth .verificationArea .verificationContainer form.authForm .authFooter .formSubmit button#formSubmitButton:hover, main.verification .authArea .authContainer form.authForm .authFooter .formSubmit button#formSubmitButton:hover,
+main.verification .authArea .verificationContainer form.authForm .authFooter .formSubmit button#formSubmitButton:hover,
+main.verification .verificationArea .authContainer form.authForm .authFooter .formSubmit button#formSubmitButton:hover,
+main.verification .verificationArea .verificationContainer form.authForm .authFooter .formSubmit button#formSubmitButton:hover {
+  background-color: #174ea6;
+}
+
+main.auth .authArea .accountImage,
+main.auth .verificationArea .accountImage, main.verification .authArea .accountImage,
+main.verification .verificationArea .accountImage {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.auth .authArea .accountImage figure,
+main.auth .verificationArea .accountImage figure, main.verification .authArea .accountImage figure,
+main.verification .verificationArea .accountImage figure {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+main.auth .authArea .accountImage figure img,
+main.auth .verificationArea .accountImage figure img, main.verification .authArea .accountImage figure img,
+main.verification .verificationArea .accountImage figure img {
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .hide-1024px {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .show-1024px {
+    display: inherit !important;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hide-768px {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .show-768px {
+    display: inherit !important;
+    opacity: 1;
+    visibility: visible;
+  }
+  main.auth .authArea .authContainer,
+  main.auth .authArea .verificationContainer,
+  main.auth .verificationArea .authContainer,
+  main.auth .verificationArea .verificationContainer, main.verification .authArea .authContainer,
+  main.verification .authArea .verificationContainer,
+  main.verification .verificationArea .authContainer,
+  main.verification .verificationArea .verificationContainer {
+    max-width: 450px;
+  }
+  main.auth .authArea .authContainer .authContent .col-md,
+  main.auth .authArea .verificationContainer .authContent .col-md,
+  main.auth .verificationArea .authContainer .authContent .col-md,
+  main.auth .verificationArea .verificationContainer .authContent .col-md, main.verification .authArea .authContainer .authContent .col-md,
+  main.verification .authArea .verificationContainer .authContent .col-md,
+  main.verification .verificationArea .authContainer .authContent .col-md,
+  main.verification .verificationArea .verificationContainer .authContent .col-md {
+    width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hide-425px {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .show-425px {
+    display: inherit !important;
+    opacity: 1;
+    visibility: visible;
+  }
+  .verificationContainer {
+    border-color: transparent !important;
+  }
+  main.auth .authArea, main.verification .authArea {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  main.auth .authArea .authContainer,
+  main.auth .authArea .verificationContainer, main.verification .authArea .authContainer,
+  main.verification .authArea .verificationContainer {
+    padding: 24px 24px 36px;
+    border-color: transparent;
+    max-width: 450px;
+  }
+  main.auth .authArea .authContainer .authContent .col-md,
+  main.auth .authArea .verificationContainer .authContent .col-md, main.verification .authArea .authContainer .authContent .col-md,
+  main.verification .authArea .verificationContainer .authContent .col-md {
+    width: 100% !important;
+  }
+  main.auth .authArea .authContainer .authFooter .formSubmit,
+  main.auth .authArea .verificationContainer .authFooter .formSubmit, main.verification .authArea .authContainer .authFooter .formSubmit,
+  main.verification .authArea .verificationContainer .authFooter .formSubmit {
+    width: 100%;
+  }
+  main.auth .authArea .authContainer .authFooter .formSubmit #formSubmitButton,
+  main.auth .authArea .verificationContainer .authFooter .formSubmit #formSubmitButton, main.verification .authArea .authContainer .authFooter .formSubmit #formSubmitButton,
+  main.verification .authArea .verificationContainer .authFooter .formSubmit #formSubmitButton {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hide-320px {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .show-320px {
+    display: inherit !important;
+    opacity: 1;
+    visibility: visible;
+  }
+  main.auth .authArea {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  main.auth .authArea .authContainer {
+    padding: 24px 24px 36px;
+    border-color: transparent;
+    max-width: 450px;
+  }
+  main.auth .authArea .authContainer .authHeader #headingText {
+    font-size: 20px;
+  }
+  main.auth .authArea .authContainer .authContent .col-md {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=index.css.map */

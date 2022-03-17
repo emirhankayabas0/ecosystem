@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+input,
+select,
+textarea,
+a,
+button {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar Width */
+body::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+/* Scrollbar Track */
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Scrollbar Handle */
+body::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 0.625rem;
+  border: 2px solid white;
+}
+
+/* Scrollbar Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #717171;
+}
+
+span.icon {
+  min-width: 3rem;
+  min-height: 3rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+span.icon:hover {
+  background-color: #eee;
+}
+
+span.icon svg {
+  min-width: 24px;
+}
+
+h1.title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 0.3rem;
+  color: #202124;
+  width: 100%;
+}
+
+.text-green {
+  color: #34a853;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #1c74e9;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 12px 24px 11px;
+  text-rendering: optimizeLegibility;
+  -webkit-transition: background-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.button:hover {
+  background-color: #174ea6;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #fff;
+}
+
+/* Header */
+header.header {
+  width: 100%;
+  height: 100%;
+  max-height: 4rem;
+  border-bottom: 1px solid #e8eaed;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+header.header nav.nav {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.header nav.nav .container,
+header.header nav.nav .container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header.header nav.nav .container .start,
+header.header nav.nav .container-fluid .start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.7rem;
+}
+
+header.header nav.nav .container .start a.brand,
+header.header nav.nav .container-fluid .start a.brand {
+  position: relative;
+}
+
+header.header nav.nav .container .start a.brand .logo,
+header.header nav.nav .container-fluid .start a.brand .logo {
+  font-size: 22px;
+  color: #181818;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+header.header nav.nav .container .start a.brand img,
+header.header nav.nav .container-fluid .start a.brand img {
+  position: absolute;
+  top: 5px;
+  left: 7.5rem;
+  width: 25px;
+  z-index: 5;
+  background-color: #fff;
+}
+
+header.header nav.nav .container .end,
+header.header nav.nav .container-fluid .end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+header.header nav.nav .container .end .app button.dropdown-toggle,
+header.header nav.nav .container-fluid .end .app button.dropdown-toggle {
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header.header nav.nav .container .end .app button.dropdown-toggle::after,
+header.header nav.nav .container-fluid .end .app button.dropdown-toggle::after {
+  display: none;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu,
+header.header nav.nav .container-fluid .end .app .dropdown-menu {
+  all: unset;
+  width: 314px;
+  z-index: 991;
+  margin-top: 57px;
+  -webkit-transition: height 0.3s ease-in-out 0s;
+  transition: height 0.3s ease-in-out 0s;
+  padding: 3px 6px 9px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 0.87);
+  height: auto;
+  display: none;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu.show,
+header.header nav.nav .container-fluid .end .app .dropdown-menu.show {
+  display: block;
+  padding-top: 10px;
+  padding-left: 14px;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu li,
+header.header nav.nav .container-fluid .end .app .dropdown-menu li {
+  display: inline-block;
+  margin-left: 5.25px;
+  list-style-type: none;
+  padding: 6px;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.333, 0, 0, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.333, 0, 0, 1);
+  transition: transform 0.2s cubic-bezier(0.333, 0, 0, 1);
+  transition: transform 0.2s cubic-bezier(0.333, 0, 0, 1), -webkit-transform 0.2s cubic-bezier(0.333, 0, 0, 1);
+  vertical-align: top;
+  width: 84px;
+  border-radius: 8px;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu li.set a .image,
+header.header nav.nav .container-fluid .end .app .dropdown-menu li.set a .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu li.set a .image img,
+header.header nav.nav .container-fluid .end .app .dropdown-menu li.set a .image img {
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  max-width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu li:hover,
+header.header nav.nav .container-fluid .end .app .dropdown-menu li:hover {
+  background-color: #e8f0fe;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu li a,
+header.header nav.nav .container-fluid .end .app .dropdown-menu li a {
+  border-radius: 8px;
+  margin: 0;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu li a .image,
+header.header nav.nav .container-fluid .end .app .dropdown-menu li a .image {
+  height: 62px;
+  -webkit-transform: scale(calc(5 / 6));
+          transform: scale(calc(5 / 6));
+}
+
+header.header nav.nav .container .end .app .dropdown-menu li a .image img,
+header.header nav.nav .container-fluid .end .app .dropdown-menu li a .image img {
+  display: inline-block;
+  height: 64px;
+  vertical-align: top;
+  width: 64px;
+}
+
+header.header nav.nav .container .end .app .dropdown-menu li a span,
+header.header nav.nav .container-fluid .end .app .dropdown-menu li a span {
+  color: #202124;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0.09px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 76px;
+}
+
+main.main {
+  padding-top: 64px;
+}
+
+main.main .container,
+main.main .container-fluid {
+  margin-top: 1rem;
+}
+
+main.main .container h1,
+main.main .container-fluid h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.main .container h1 img,
+main.main .container-fluid h1 img {
+  min-width: 27px;
+  max-width: 27px;
+}
+
+main.main .container > div,
+main.main .container-fluid > div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 2px solid #1c74e9;
+  border-radius: 0 0.25rem 0.25rem 0;
+  padding: 1rem;
+  border-top: 1px solid #e8eaed;
+  border-right: 1px solid #e8eaed;
+  border-bottom: 1px solid #e8eaed;
+  min-width: 320px;
+  margin-bottom: 1rem;
+}
+
+main.main .container > div > div,
+main.main .container-fluid > div > div {
+  margin-bottom: 0.3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.main .container > div > div:last-child,
+main.main .container-fluid > div > div:last-child {
+  margin-bottom: 0rem;
+}
+
+main.main .container > div .key,
+main.main .container-fluid > div .key {
+  color: rgba(0, 0, 0, 0.75);
+  min-width: 150px !important;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+main.main .container > div .value,
+main.main .container-fluid > div .value {
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+main.main .container > div .info,
+main.main .container-fluid > div .info {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e8eaed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main.main .container > div .info .countries,
+main.main .container-fluid > div .info .countries {
+  font-weight: 500;
+  color: #000;
+}
+
+main.main .container > div .info .date,
+main.main .container-fluid > div .info .date {
+  font-size: 14px;
+  color: #000;
+}
+
+footer {
+  background: #f8f9fa;
+  font-size: 14.5px;
+  margin-top: 11px;
+  padding: 1rem;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+/* Media Screen */
+@media screen and (max-width: 1024px) {
+  .hide-1024 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hide-768 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hide-425 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hide-320 {
+    display: none !important;
+  }
+  main.main .container > div,
+  main.main .container-fluid > div {
+    min-width: 295px !important;
+  }
+}
+
+/* Media Screen End */
+/*# sourceMappingURL=index.css.map */
